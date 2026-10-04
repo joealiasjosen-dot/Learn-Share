@@ -2,7 +2,7 @@
   "name": "learn-share-backend",
   "type": "module",
   "scripts": {
-    "start": "node --env-file=.env server.js"
+    "start": "node server.js"
   },
   "engines": {
     "node": ">=20"
