@@ -3,32 +3,45 @@ services:
     name: learn-share
     runtime: node
     plan: free
+
     buildCommand: npm install
     startCommand: npm start
+
     healthCheckPath: /api/health
+
     envVars:
       - key: NODE_ENV
         value: production
+
       - key: DATABASE_URL
         fromDatabase:
           name: learn-share-db
           property: connectionString
+
       - key: JWT_SECRET
         generateValue: true
+
       - key: KEY_ENC
         generateValue: true
+
       - key: ALLOW_SERVER_KEY
         value: "0"
+
       - key: CLAUDE_MODEL
         value: claude-sonnet-5-5
+
       - key: ANTHROPIC_API_KEY
         sync: false
+
       - key: SMTP_URL
         sync: false
+
       - key: MAIL_FROM
         sync: false
+
       - key: TRANSCRIBE_URL
         value: https://api.openai.com/v1/audio/transcriptions
+
       - key: TRANSCRIBE_KEY
         sync: false
 
