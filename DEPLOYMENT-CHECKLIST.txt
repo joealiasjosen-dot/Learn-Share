@@ -1,0 +1,14 @@
+LEARN&SHARE - FINAL DEPLOYMENT CHECKLIST
+
+1. Upload the CONTENTS of this folder to the ROOT of your GitHub Learn-Share repository.
+2. Make sure package.json, server.js, render.yaml and public/index.html are directly in the repo root.
+3. In Render choose New -> Blueprint and select the repository.
+4. Wait for the web service and Postgres database to deploy.
+5. Open the generated https://<name>.onrender.com URL.
+6. Create an account.
+7. For AI features, either:
+   A) leave ALLOW_SERVER_KEY=0 and add an Anthropic API key in Learn&Share Settings, or
+   B) set ALLOW_SERVER_KEY=1 and add ANTHROPIC_API_KEY in Render Environment.
+8. Put the final Render URL in README.md under Live Demo.
+
+Do NOT upload .env files or API keys to GitHub.
